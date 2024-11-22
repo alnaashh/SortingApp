@@ -32,6 +32,7 @@ public class SortingAppFancy extends JFrame {
         JLabel inputLabel = new JLabel("Enter numbers:", JLabel.CENTER);
         inputLabel.setFont(new Font("SansSerif", Font.PLAIN, 16));
         inputField = new JTextField(20);
+        inputField.setFont(new Font("SansSerif", Font.PLAIN, 18)); 
         inputField.setHorizontalAlignment(JTextField.CENTER);
 
         JPanel methodPanel = new JPanel(new FlowLayout());
@@ -39,6 +40,7 @@ public class SortingAppFancy extends JFrame {
         JLabel methodLabel = new JLabel("Choose Sorting Method:");
         methodLabel.setFont(new Font("SansSerif", Font.PLAIN, 16));
         methodSelector = new JComboBox<>(new String[]{"Bubble Sort", "Selection Sort"});
+        methodSelector.setFont(new Font("SansSerif", Font.PLAIN, 16));
         methodPanel.add(methodLabel);
         methodPanel.add(methodSelector);
 
@@ -60,8 +62,9 @@ public class SortingAppFancy extends JFrame {
 
         resultArea = new JTextArea(5, 30);
         resultArea.setEditable(false);
-        resultArea.setFont(new Font("Monospaced", Font.PLAIN, 14));
+        resultArea.setFont(new Font("Monospaced", Font.BOLD, 18)); 
         resultArea.setForeground(new Color(70, 130, 180));
+        resultArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); 
         JScrollPane scrollPane = new JScrollPane(resultArea);
         scrollPane.setBorder(BorderFactory.createTitledBorder("Sorted Output"));
         scrollPane.setBackground(bgColor);
